@@ -74,7 +74,12 @@ def abi_to_dict(filename):
 def generate_consensusseq(abidata):
     consensus_seq = ""  
     for values in zip(abidata["channel"]["A"][1], abidata["channel"]["T"][1], abidata["channel"]["G"][1], abidata["channel"]["C"][1]):
-        consensus_seq += _atgc_dict[values.index(max(values))]
+        max_value = max(values)
+        max_index = values.index(max_value)
+        consensus_seq += _atgc_dict[max_index]
+        position = len(consensus_seq) - 1
+        base = consensus_seq[position]
+        print(f"Position: {position}, Base: {base}, Max Value: {max_value}, Values: {values}, Bases: {_atgc_dict}")
      
     return (consensus_seq, consensus_seq.translate(str.maketrans("ATGC","TACG"))[::-1]) 
 
