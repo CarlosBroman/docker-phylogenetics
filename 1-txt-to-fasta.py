@@ -49,4 +49,4 @@ for filename in os.listdir(input_dir):
 print(f"{forward} forward sequences")
 print(f"{reverse} reverse sequences")
 print(f"{total} total sequences")
-print(f"{NNNNN} samples were not sequenced")
+print(f"{NNNNN} samples did not return any valid sequence")
