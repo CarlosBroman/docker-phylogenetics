@@ -49,18 +49,20 @@ def abi_to_dict(filename):
 
 def generate_values(abidata):
     intensity_values = []  # To store the maximum values
+    positions = []
+    consensus_seq = ""
 
     for values in zip(abidata["channel"]["A"][1], abidata["channel"]["T"][1], abidata["channel"]["G"][1], abidata["channel"]["C"][1]):
         intensity_values.append(values)
-        print(values)
+        positions.append(len(intensity_values))
+        max_index=values.index(max(values))
+        consensus_seq += _atgc_dict[max_index]
+    print(consensus_seq)
 
-    return (intensity_values)
-
-# def plot_intensities(intensities):
     plt.figure(figsize=(8, 6))  # Create a new figure
 
     start_index = 50  # Replace with the starting index of your desired slice
-    end_index = 70 
+    end_index = 100
 
     sliced_positions = positions[start_index:end_index]
     sliced_values = [values[start_index:end_index] for values in [abidata["channel"]["A"][1], abidata["channel"]["T"][1], abidata["channel"]["G"][1], abidata["channel"]["C"][1]]]
@@ -82,16 +84,7 @@ def generate_values(abidata):
 
     plt.show()  # Display the plot
 
-def generate_consensusseq(abidata):
-    consensus_seq = ""
-    
-    for values in generate_values(abidata):
-        max_value = max(values)
-        max_index = values.index(max_value)
-        consensus_seq += _atgc_dict[max_index]
-        complementary_seq = consensus_seq.translate(str.maketrans("ATGC","TACG"))[::-1]
-
-    return (consensus_seq, complementary_seq) 
+    return (intensity_values)
 
 
 # TRIALS
@@ -102,12 +95,10 @@ with open("my_chromatograms/MH3_F.txt", "r") as sequence_file:
 
 abi_data = abi_to_dict(filename)
 
-consensus_sequences = generate_consensusseq(abi_data)
+consensus_sequences = generate_values(abi_data)
 
 # Unpack the results of the generate_consensusseq function
 consensus_seq, reverse_complement_seq = consensus_sequences
 alignments = pairwise2.align.globalxx(consensus_seq, original_txt)
 
 alignment = format_alignment(*alignments[0])
-
-print(f'\nALIGNMENT \n {alignment}')
