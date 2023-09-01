@@ -12,6 +12,9 @@ https://biopython.org/wiki/ABI_traces
 ## Based on:
 https://github.com/ponnhide/sangerseq_viewer/tree/main
 
+## Using the plotly template
+https://plotly.com/python/range-slider/
+
 
 ## Also took information from Ugene source code:
 "The provided code snippet defines the implementation of the DNAChromatogram class within the UGENE bioinformatics software. This class represents DNA chromatogram data and provides methods for accessing chromatogram values, performing equality comparisons between chromatograms, and storing related information such as trace lengths and sequence lengths."

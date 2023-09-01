@@ -1,0 +1,59 @@
+LOCUS       AF184944                 714 bp    DNA     linear   PLN 06-APR-2005
+DEFINITION  Symbiodinium sp. JCUTS-1 18S ribosomal RNA gene, partial sequence;
+            internal transcribed spacer 1, 5.8S ribosomal RNA gene and internal
+            transcribed spacer 2, complete sequence; and 24S ribosomal RNA
+            gene, partial sequence.
+ACCESSION   AF184944
+VERSION     AF184944.1
+KEYWORDS    .
+SOURCE      Symbiodinium sp. JCUTS-1
+  ORGANISM  Symbiodinium sp. JCUTS-1
+            Eukaryota; Sar; Alveolata; Dinophyceae; Suessiales;
+            Symbiodiniaceae; Symbiodinium.
+REFERENCE   1  (bases 1 to 714)
+  AUTHORS   Baillie,B.K., Carlos,A.A., Belda-Baillie,C.A. and Maruyama,T.
+  TITLE     Phylogenetic analysis of genus Symbiodinium using nITS DNA
+            sequences
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 714)
+  AUTHORS   Baillie,B.K.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (13-SEP-1999) Kamaishi Laboratories, Marine Biotechnology
+            Institute, Heita 3-75-1, Kamaishi, Iwate 026-0001, Japan
+FEATURES             Location/Qualifiers
+     source          1..714
+                     /organism="Symbiodinium sp. JCUTS-1"
+                     /mol_type="genomic DNA"
+                     /strain="JCUTS-1"
+                     /host="Tridacna squamosa"
+                     /db_xref="taxon:141425"
+                     /country="Australia"
+     rRNA            <1..133
+                     /product="18S ribosomal RNA"
+     primer_bind     1..27
+                     /note="PCR primer zITSf"
+     misc_RNA        134..336
+                     /product="internal transcribed spacer 1"
+     rRNA            337..490
+                     /product="5.8S ribosomal RNA"
+     misc_RNA        491..647
+                     /product="internal transcribed spacer 2"
+     rRNA            648..>714
+                     /product="24S ribosomal RNA"
+     primer_bind     complement(695..714)
+                     /note="PCR primer ITS4"
+ORIGIN      
+        1 ccggtgaatt attcggactg acgcagtgct cagcttctgg acgttgcgtt ggaaagtttc
+       61 atgaacctta tcacttagag gaaggagaag tcgtaacaag gtttccgtag gtgaacctgc
+      121 ggaaggatca ttcgcactat ccaaaacttg tcgtgaacct ggctgaatgc gactgcttgt
+      181 gaatttgttt ttgcaagtgg aagctatggg cgactggagg tattcggagc tgcactgtgt
+      241 gtatgttctg ggtgctgccc atcgtcattg gtccctcttg gaccttccac aactcaactt
+      301 actcttgttt cagcttgtgt caaggataat ttgattacaa ttttcagcga cggatatctt
+      361 ggctcgagca cctatgaagg gcgcagcgaa gtgcgataat cgttgtgaat tgcagaactc
+      421 cgtgaaccaa tggcctcttg aacgtgcatt gcgctcttgg gatatgcctg agagcatgtc
+      481 tgcttcagtg cttctacttt cttttctgct gctcttgtta tcaggagcag tgctgctgca
+      541 tgcttctgca attggcactg gcatgctaag taccaagttt cgcttgctgt tgtgactgat
+      601 caacatctca tgtcgtttca gttggcgaaa caaaggcttg tgtgttccaa cacttcctag
+      661 catgaagtca gacaagtgaa cccgccgaat ttaagcatat caataagcgg agga
+//
+
